@@ -18,8 +18,8 @@ body{
     justify-content: center;
 }
 .perfil{
-    max-height: 40%;
-    max-width: 40%;
+    max-height: 20%;
+    max-width: 20%;
     margin-top: 15px;
     border-radius: 50%;
     align-items: center;
