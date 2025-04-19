@@ -12,50 +12,66 @@
 </head>
 <body>
     <div class="root">
-        <img class="perfil" src="./css/profile.jpg" alt="Minha foto">
-        <span>Hello, my name is Maikon and i'm Technician in Systems Analysis and Development, with preference in Web Design.</span>
-        <span>I leave my resume and link to projects I've been working on, feel free!</span>
+        <img class="perfil" src="./css/profile2.jpg" alt="Minha foto">
+        <p>Hello! My name is Maikon — I'm a Technician in Systems Analysis and Development, with a strong focus on Web Design and data automation.
+        <br>I'm passionate about building efficient and smart solutions, especially using Make (Integromat) to automate processes in ERPs like Odoo, and integrating tools like Excel and Power BI for dynamic data analysis and reporting.
+        <br>I’ve also been working on data analytics projects using Python and Pandas — including hypothesis testing, customer behavior analysis, and report optimization.
+        <br>Feel free to check out my resume and explore some of the projects I've been working on!</p>
         <hr>
+        <footer>
+            <div class="links">
+                <ul style="list-style: none;" class="link-itens">
+                    <li class="linkedin">
+                    <a href="https://www.linkedin.com/in/maikon-silva-457b98181/">
+                    <i class="fa-brands fa-linkedin"></i><p>Linkedin</p>
+                    <span></span>
+                    </a>
+                    <li class="email">
+                        <a href="mailto:mcharles784@gmail.com">
+                            <i class="fa-solid fa-envelope"></i><p>Email</p>
+                            <span></span>
+                        </a>
+                    <li class="github">
+                    <a href="https://github.com/m4ik-crtl">
+                    <i class="fa-brands fa-github"></i><p>Github</p>
+                    <span></span>
+                    </a>
+                    <li class="resume">
+                    <a href="https://drive.google.com/file/d/14QhbcGxEkNXbvoIvCzN7HEX7XtbHt56B/view?usp=sharing">
+                    <i class="fa-solid fa-file"></i><p>Resume</p>
+                    <span></span>
+                    </a>
+                    <li class="instagram">
+                    <a href="https://www.instagram.com/angel_iyzz/">
+                    <i class="fa-brands fa-instagram"></i><p>Instagram</p>
+                    <span></span>
+                    </a>
+                    </li>
+                </ul>
+        </div>
+            </footer>
     </div>
-</body>
-<div> 
+    <script>
+        // Efeito de clique com feedback visual
+        const links = document.querySelectorAll('.link-itens li');
     
-</div>
-<footer>
-    <div class="links">
-        <ul style="list-style: none;" class="link-itens">
-            <li class="linkedin">
-            <a href="https://www.linkedin.com/in/maikon-fernando-457b98181/">
-            <i class="fa-brands fa-linkedin"></i><p>Linkedin</p>
-            <span></span>
-            </a>
-            <li class="github">
-            <a href="https://github.com/m4ik-crtl">
-            <i class="fa-brands fa-github"></i><p>Github</p>
-            <span></span>
-            </a>
-            <li class="gitlab">
-            <a href="https://gitlab.com/m4ik-crtl">
-            <i class="fa-brands fa-gitlab"></i><p>Gitlab</p>
-            <span></span>
-            </a>                
-            <li class="behance">
-            <a href="https://www.behance.net/m4yk">
-            <i class="fa-brands fa-behance"></i><p>Behance</p>
-            <span></span>
-            </a>
-            <li class="resume">
-            <a href="https://drive.google.com/file/d/1ZwNq_lBCg8h82ZzbtsXdYSawd_GDBJ23/view?usp=drive_link">
-            <i class="fa-solid fa-file"></i><p>Resume</p>
-            <span></span>
-            </a>
-            <li class="instagram">
-            <a href="https://www.instagram.com/angel_iyzz/">
-            <i class="fa-brands fa-instagram"></i><p>Instagram</p>
-            <span></span>
-            </a>
-            </li>
-        </ul>
-</div>
-    </footer>
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transition = 'transform 0.3s ease';
+                link.style.transform = 'scale(1.08)';
+            });
+    
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'scale(1)';
+            });
+    
+            link.addEventListener('click', () => {
+                link.classList.add('clicked');
+                setTimeout(() => {
+                    link.classList.remove('clicked');
+                }, 300);
+            });
+        });
+    </script>   
+</body>
 </html>
